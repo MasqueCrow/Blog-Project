@@ -7,8 +7,11 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ('author','title','text')
 
+        # To get custom styling to forms, adding widget attribute
+        # classnames refers to the external css library used
+        # 'textinputclass' and 'postcontent are custom classes
         widgets = {
-            #textinputclass and postcontent are our own css classes, the rest are built-in by default
+
             'title':forms.TextInput(attrs={'class':'textinputclass'}),
             'text':forms.Textarea(attrs={ 'class':'editable medium-editor-textarea postcontent'})
         }
@@ -20,6 +23,7 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('author','text')
 
+        # Similer kind of widgets as PostForm, no 'postcontent' custom class
         widgets = {
             'author':forms.TextInput(attrs={'class':'textinputclass'}),
             'text':forms.Textarea(attrs={ 'class':'editable medium-editor-textarea'})
