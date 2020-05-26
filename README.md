@@ -10,7 +10,7 @@ python manage.py runserver
 
 ### Prerequisites
 This project was developed with:
-1. Django 3.03
+1. Django 3.0.3
 2. Python 3.7.6
 
 ### Features
